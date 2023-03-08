@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --font-size-paragraph: 16px;
+  --red-hat-display: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-color: var(--pale-blue);
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: var(--red-hat-display);
+  display: flex;
+  background-image: url("./images/pattern-background-mobile.svg");
+}
+
+#card {
+  background-color: red;
+  margin: auto;
+  max-width: 350px;
+  background-size: cover;
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+}
+
+#card img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: calc(var(--font-size-paragraph) + 8px);
+  color: var(--dark-blue);
+  margin: 30px 0 20px 0;
+  font-weight: 900;
+}
+
+p {
+  color: var(--desaturated-blue);
+  font-size: var(--font-size-paragraph);
+}
+
+article {
+  display: flex;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  margin: 20px;
+  padding: 15px 20px;
+  border-radius: 1em;
+  justify-content: space-between;
+}
+
+#subscription {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  margin-right: 3em;
+}
+
+#plan {
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: calc(var(--font-size-paragraph) - 2px);
+}
+
+#price {
+  color: var(--desaturated-blue);
+  font-size: calc(var(--font-size-paragraph) - 2px);
+}
+
+a {
+  font-size: calc(var(--font-size-paragraph) - 2px);
+}
+
+#buttons {
+  display: grid;
+  margin: 30px 20px 30px 20px;
+  gap: 10px;
+}
+
+button {
+  height: 50px;
+  border-radius: 1em;
+  border: none;
+  font-size: var(--font-size-paragraph);
+  font-weight: 700;
+}
+
+#payment {
+  background: var(--bright-blue);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#cancel {
+  background: none;
+  color: grey;
+  margin: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-size: contain;
+    background-position: 0 -10%;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  #payment:hover {
+    filter: opacity(50%);
+  }
+
+  #cancel:hover {
+    color: var(--dark-blue);
+  }
+}
